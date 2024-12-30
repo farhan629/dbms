@@ -1,0 +1,84 @@
+insert into customer values(1,'farhan','tamilnadu',123456789)
+INSERT INTO ITEM (ITEMNO, ITEMNAME, ITEMPRICE, QTYONHAND)
+VALUES (1, 'doo', 120.00, 12.00);
+
+INSERT INTO invoice 
+VALUES (1, TO_DATE('2002-11-02', 'YYYY-MM-DD'), 1);
+insert into invitem values(1,1,4)
+
+
+INSERT INTO customer
+VALUES (2, 'Ali', 'Karna', 987654321);
+
+INSERT INTO customer
+VALUES (6, 'John', 'Mumbai', 123123);
+
+INSERT INTO customer 
+VALUES (4, 'Jane', 'Delhi', 456456456);
+
+
+
+
+INSERT INTO ITEM (ITEMNO, ITEMNAME, ITEMPRICE, QTYONHAND)
+VALUES (2, 'foo', 50.00, 20.00);
+
+INSERT INTO ITEM (ITEMNO, ITEMNAME, ITEMPRICE, QTYONHAND)
+VALUES (3, 'bar', 75.00, 15.00);
+
+INSERT INTO ITEM (ITEMNO, ITEMNAME, ITEMPRICE, QTYONHAND)
+VALUES (4, 'baz', 100.00, 10.00);
+
+INSERT INTO ITEM (ITEMNO, ITEMNAME, ITEMPRICE, QTYONHAND)
+VALUES (5, 'qux', 200.00, 8.00);
+
+
+INSERT INTO invoice 
+VALUES (2, TO_DATE('2002-12-01', 'YYYY-MM-DD'), 2);
+
+INSERT INTO invoice
+VALUES (3, TO_DATE('2002-12-05', 'YYYY-MM-DD'), 3);
+
+INSERT INTO invoice 
+VALUES (4, TO_DATE('2002-12-10', 'YYYY-MM-DD'), 4);
+
+
+
+
+INSERT INTO invitem (INVNO, ITEMNO, QTY)
+VALUES (1, 2, 3);
+
+-- For Invoice 2 (Customer 2)
+INSERT INTO invitem (INVNO, ITEMNO, QTY)
+VALUES (2, 3, 2);
+
+INSERT INTO invitem (INVNO, ITEMNO, QTY)
+VALUES (2, 4, 5);
+
+-- For Invoice 3 (Customer 3)
+INSERT INTO invitem (INVNO, ITEMNO, QTY)
+VALUES (3, 1, 6);
+
+INSERT INTO invitem (INVNO, ITEMNO, QTY)
+VALUES (3, 5, 1);
+
+-- For Invoice 4 (Customer 4)
+INSERT INTO invitem (INVNO, ITEMNO, QTY)
+VALUES (4, 2, 7);
+
+
+select itemname||' price is '||itemprice as item_with_price  from item 
+
+INSERT INTO invitem (INVNO, ITEMNO, QTY)
+VALUES (4, 3, 3);
+
+select itemname from item where itemname like '%o%'
+
+select * from customer where custname='John'
+
+
+SELECT TO_CHAR(INVDATE, 'FMMonth DD, YYYY') AS Formatted_Invoice_Date
+FROM invoice;
+
+
+
+select itemname,round(itemprice)from item  
